@@ -29,9 +29,4 @@ for i in range(2, width // 2):
         members[8] = img.getpixel((i + 1, j + 1))
         new_img.putpixel((i, j), (random.choice(members)))
 
-for i in range(width // 2, width - 1):
-    for j in range(1, height - 1):
-        r, g, b = img.getpixel((i, j))
-        new_img.putpixel((i, j), (0, g, b))
-
 new_img.save(output_path)
